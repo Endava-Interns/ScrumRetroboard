@@ -1,29 +1,36 @@
 package com.endava.intern.model;
 
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by snajdov on 7/7/16.
  */
+
+@Entity
 public class User {
 
     private String name;
     private String sessionId;
     @OneToMany
-    List<Message> messages;
+    Set<Message> messages;
 
     public User() {
         super();
+    }
+
+    public User(String name, String sessionId) {
+        this.name = name;
+        this.sessionId = sessionId;
+        messages = new TreeSet<>();
     }
 
     public void addMessage(Message message) {
         messages.add(message);
     }
 
-    public List<Message> getMessages() {
+    public Set<Message> getMessages() {
         return messages;
     }
 
