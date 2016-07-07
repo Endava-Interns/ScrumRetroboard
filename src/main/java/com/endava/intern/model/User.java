@@ -11,9 +11,9 @@ import java.util.*;
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private int userId;
-    private String name;
-    private String sessionId;
+    private int id;
+    private String username;
+    private String session;
     @OneToMany(mappedBy = "user")
     Set<Message> messages;
 
@@ -22,8 +22,8 @@ public class User {
     }
 
     public User(String name, String sessionId) {
-        this.name = name;
-        this.sessionId = sessionId;
+        this.username = name;
+        this.session = sessionId;
         messages = new TreeSet<>();
     }
 
@@ -35,4 +35,23 @@ public class User {
         return messages;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setSession(String session) {
+        this.session = session;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getSession() {
+        return session;
+    }
 }
