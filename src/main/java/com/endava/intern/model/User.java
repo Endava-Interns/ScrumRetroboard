@@ -1,7 +1,6 @@
 package com.endava.intern.model;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.*;
 
 /**
@@ -11,9 +10,11 @@ import java.util.*;
 @Entity
 public class User {
 
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private int userId;
     private String name;
     private String sessionId;
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     Set<Message> messages;
 
     public User() {
