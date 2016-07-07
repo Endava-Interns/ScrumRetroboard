@@ -1,5 +1,4 @@
 language: java
 script:
-  - jdk_switcher use oraclejdk8
   - mvn clean verify
 
