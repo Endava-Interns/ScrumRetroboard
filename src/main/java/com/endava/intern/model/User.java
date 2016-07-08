@@ -1,6 +1,7 @@
 package com.endava.intern.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -9,11 +10,13 @@ import java.util.*;
 
 @Entity
 @Table(name = "Users")
-public class User {
+public class User implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column
     private String username;
+    @Column
     private String session;
     @OneToMany(mappedBy = "user")
     Set<Message> messages;
