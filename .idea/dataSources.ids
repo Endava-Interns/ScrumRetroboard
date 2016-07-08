@@ -13,22 +13,22 @@
       </database>
       <schema id="2" parent="1" name="dbo">
         <object-id>1</object-id>
-        <introspection-timestamp>2016-07-07.13:50:36.667</introspection-timestamp>
+        <introspection-timestamp>2016-07-08.13:25:14.230</introspection-timestamp>
       </schema>
-      <table id="3" parent="2" name="messages">
+      <table id="3" parent="2" name="Messages">
         <object-id>1301579675</object-id>
         <created-timestamp>2016-07-07.09:20:33.100</created-timestamp>
-        <modified-timestamp>2016-07-07.13:04:13.540</modified-timestamp>
+        <modified-timestamp>2016-07-08.12:15:15.117</modified-timestamp>
       </table>
       <table id="4" parent="2" name="sysdiagrams">
         <object-id>1205579333</object-id>
         <created-timestamp>2016-07-07.09:14:21.243</created-timestamp>
         <modified-timestamp>2016-07-07.09:14:21.243</modified-timestamp>
       </table>
-      <table id="5" parent="2" name="users">
+      <table id="5" parent="2" name="Users">
         <object-id>1173579219</object-id>
         <created-timestamp>2016-07-07.09:14:01.820</created-timestamp>
-        <modified-timestamp>2016-07-07.09:21:22.890</modified-timestamp>
+        <modified-timestamp>2016-07-08.12:14:50.783</modified-timestamp>
       </table>
       <routine id="6" parent="2" name="fn_diagramobjects">
         <object-id>1157579162</object-id>
@@ -89,7 +89,7 @@
       <column id="14" parent="3" name="message_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(2)</sequence-identity>
+        <sequence-identity>1(4)</sequence-identity>
       </column>
       <column id="15" parent="3" name="text">
         <mandatory>1</mandatory>
@@ -123,7 +123,7 @@
         <created-timestamp>2016-07-07.09:21:22.890</created-timestamp>
         <modified-timestamp>2016-07-07.09:21:22.890</modified-timestamp>
         <columns>user_id</columns>
-        <ref-key>~.users.PK_users</ref-key>
+        <ref-key>~.Users.PK_users</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
@@ -188,7 +188,7 @@ name</columns>
       <column id="31" parent="5" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(3)</sequence-identity>
+        <sequence-identity>1(4)</sequence-identity>
       </column>
       <column id="32" parent="5" name="session">
         <mandatory>1</mandatory>
