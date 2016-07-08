@@ -1,5 +1,6 @@
 package com.endava.intern.controller;
 
+import com.endava.intern.model.User;
 import com.endava.intern.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,6 @@ public class UserController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public void newUser(){
-
+        userService.saveUser(new User("Simona", "12345"));
     }
 }
