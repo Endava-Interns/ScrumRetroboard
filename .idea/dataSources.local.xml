@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQL Server (Microsoft) - endava_scrum_db@endavadb.database.windows.net" uuid="fda9d62f-eead-49a0-adb9-f70322fd043c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>endava</user-name>
+    </data-source>
+  </component>
+</project>
