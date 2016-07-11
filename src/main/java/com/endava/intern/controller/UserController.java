@@ -1,5 +1,6 @@
 package com.endava.intern.controller;
 
+import com.endava.intern.model.Session;
 import com.endava.intern.model.User;
 import com.endava.intern.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public void newUser(){
-        userService.saveUser(new User("Simona", "12345"));
+        User u = new User("Simona", new Session());
+        userService.saveUser(u);
+        System.out.println(u.getSession());
     }
 }

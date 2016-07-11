@@ -1,5 +1,7 @@
 package com.endava.intern.model;
 
+import org.hibernate.annotations.Fetch;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
@@ -15,7 +17,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int user_id;
-    private String session;
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "session_id")
+    private Session session;
+
     private String username;
 
     @OneToMany(mappedBy = "user")
@@ -25,9 +31,9 @@ public class User {
         super();
     }
 
-    public User(String name, String sessionId) {
+    public User(String name, Session session) {
         this.username = name;
-        this.session = sessionId;
+        this.session = session;
         messages = new TreeSet<>();
     }
 
@@ -43,7 +49,7 @@ public class User {
         this.username = username;
     }
 
-    public void setSession(String session) {
+    public void setSession(Session session) {
         this.session = session;
     }
 
@@ -55,7 +61,7 @@ public class User {
         return username;
     }
 
-    public String getSession() {
+    public Session getSession() {
         return session;
     }
 }
