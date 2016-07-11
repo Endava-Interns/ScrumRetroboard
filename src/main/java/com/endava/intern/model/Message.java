@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "Messages")
+@Table(name = "endava_scrum_db.dbo.Messages")
 public class Message {
 
     @Id

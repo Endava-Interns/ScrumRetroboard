@@ -9,15 +9,15 @@ import java.util.*;
  */
 
 @Entity
-@Table(name = "Users")
-public class User implements Serializable {
+@Table(name = "endava_scrum_db.dbo.Users")
+public class User {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    @Column
-    private String username;
-    @Column
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int user_id;
     private String session;
+    private String username;
+
     @OneToMany(mappedBy = "user")
     Set<Message> messages;
 
@@ -48,7 +48,7 @@ public class User implements Serializable {
     }
 
     public int getId() {
-        return id;
+        return user_id;
     }
 
     public String getUsername() {
