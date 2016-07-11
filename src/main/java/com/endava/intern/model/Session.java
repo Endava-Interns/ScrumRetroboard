@@ -1,9 +1,8 @@
 package com.endava.intern.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.Random;
 
 /**
@@ -21,6 +20,11 @@ public class Session {
             '0','1','2','3','4','5','6','7','8','9'
     };
 
+    @PrePersist
+    private void ensureID(){
+        generateSessionID();
+    }
+
     @Id
     private String session_id;
     @Column(name = "is_changed")
@@ -28,15 +32,16 @@ public class Session {
 
     public Session() {
         isChanged = false;
-        generateSessionID();
+        //generateSessionID();
     }
+
 
     private void generateSessionID() {
         Random r = new Random();
         StringBuilder s = new StringBuilder();
         for(int i = 0 ; i < 10 ; i++) {
             int randomNum = r.nextInt(62);
-            s.append(randomNum + '0');
+            s.append(alphabet[randomNum]);
         }
         session_id = s.toString();
     }
