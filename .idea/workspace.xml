@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e9fc729-646a-455f-963d-be50e943bc36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/endava/intern/model/Message.class" afterPath="$PROJECT_DIR$/target/classes/com/endava/intern/model/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/endava/intern/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/endava/intern/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="ScrumRetroBoardJava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,16 +77,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ScrumRetroBoardJavaApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/ScrumRetroBoardJavaApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application-context.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -170,26 +158,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
+            <state relative-caret-position="102">
+              <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="endava_scrum_db.dbo.Users" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Users">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="120" selection-start-line="4" selection-start-column="120" selection-end-line="4" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -227,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepositoryCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/impl/UserRepositoryImpl.java" />
@@ -243,6 +225,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -998,12 +981,12 @@
       <workItem from="1467897710803" duration="1960000" />
       <workItem from="1467973115624" duration="8646000" />
       <workItem from="1467981843950" duration="3819000" />
-      <workItem from="1468224530435" duration="4262000" />
+      <workItem from="1468224530435" duration="5802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23647000" />
+    <option name="totallyTimeSpent" value="25187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1066,7 +1049,7 @@
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1159,7 +1142,7 @@
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1304,13 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/MessageCategory.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1378,7 +1354,7 @@
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1474,8 +1450,8 @@
         <state relative-caret-position="255">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1529,8 +1505,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="74" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
+        <state relative-caret-position="102">
+          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="120" selection-start-line="4" selection-start-column="120" selection-end-line="4" selection-end-column="120" />
           <folding />
         </state>
       </provider>
