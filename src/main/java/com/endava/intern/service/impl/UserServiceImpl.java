@@ -7,6 +7,8 @@ import com.endava.intern.service.UserService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by sstamenkova on 7/8/2016.
  */
@@ -19,5 +21,10 @@ public class UserServiceImpl implements UserService {
 
     public void saveUser(User u) {
         userRepository.save(u);
+    }
+
+    @Override
+    public List<User> getUserByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 }
