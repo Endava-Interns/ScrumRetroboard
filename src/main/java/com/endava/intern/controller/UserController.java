@@ -20,6 +20,7 @@ public class UserController {
     UserService userService;
 
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public void newUser(){
         User u = new User("Simona", new Session());
