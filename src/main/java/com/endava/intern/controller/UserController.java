@@ -39,9 +39,9 @@ public class UserController {
         sessionService.saveSession(s);
         User u = new User("Simona", s);
         userService.saveUser(u);
-        Message m = new Message("content of the message", MessageCategory.CONTINUE,u);
+        Message m = new Message("content of the message","Continue",u);
         messageService.save(m);
-        m = new Message("content of the message2", MessageCategory.STOP,u);
+        m = new Message("content of the message2","Stop",u);
         messageService.save(m);
         System.out.println(u.getSession());
         User user = userService.getUserByUsername("Simona").get(0);

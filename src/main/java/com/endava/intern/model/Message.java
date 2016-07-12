@@ -12,18 +12,19 @@ public class Message implements Comparable<Message>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "message_id")
     private Long id;
     @Column(name = "text")
     private String content;
-    private MessageCategory category;
+    private String category;
 
     @ManyToOne
-    @Column(name = "user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Message(){}
 
-    public Message(String content, MessageCategory category, User user) {
+    public Message(String content, String category, User user) {
         this.content = content;
         this.category = category;
         this.user = user;
@@ -45,7 +46,7 @@ public class Message implements Comparable<Message>{
         this.content = content;
     }
 
-    public void setCategory(MessageCategory category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -61,7 +62,7 @@ public class Message implements Comparable<Message>{
         return id;
     }
 
-    public MessageCategory getCategory() {
+    public String getCategory() {
         return category;
     }
 

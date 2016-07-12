@@ -6,7 +6,9 @@ import com.endava.intern.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by jarsov on 7/12/2016.
@@ -26,6 +28,8 @@ public class MessageServiceImpl implements MessageService{
 
     @Override
     public Set<Message> getAll() {
-        return (Set<Message>) messageRepository.findAll();
+        Set<Message> set = new TreeSet<>();
+        set.addAll((Collection<Message>)messageRepository.findAll());
+        return set;
     }
 }
