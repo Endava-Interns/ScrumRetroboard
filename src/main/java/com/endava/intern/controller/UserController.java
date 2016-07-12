@@ -31,5 +31,7 @@ public class UserController {
         User u = new User("Simona", s);
         userService.saveUser(u);
         System.out.println(u.getSession());
+        User user = userService.getUserByUsername("Simona").get(0);
+        System.out.println(user.getId());
     }
 }
