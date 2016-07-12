@@ -13,4 +13,7 @@ import java.util.List;
 public interface UserService {
     void saveUser(User u);
     List<User> getUserByUsername(String username);
+    void deleteUser(User u);
+    void deleteUserByID(Long ID);
+
 }

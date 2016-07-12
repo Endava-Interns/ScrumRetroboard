@@ -39,20 +39,24 @@ public class UserController {
         sessionService.saveSession(s);
         User u = new User("Simona", s);
         userService.saveUser(u);
-        Message m1 = new Message("content of the message", "Continue", u);
-        messageService.save(m1);
-        Message m2 = new Message("content of the message to be deleted", "Stop", u);
-        messageService.save(m2);
+        /*Message m1 = new Message("content of the message", "Continue", u);
+        messageService.save(m1);*/
+        /*Message m2 = new Message("content of the message to be deleted", "Stop", u);
+        messageService.save(m2);*/
         System.out.println(u.getSession());
         User user = userService.getUserByUsername("Simona").get(0);
         System.out.println(user.getId());
+        //userService.deleteUser(user);
         Set<Message> treeSet = messageService.getAll();
         System.out.println(treeSet);
-        messageService.delete(m1);
+        /*messageService.delete(m1);
         treeSet = messageService.getAll();
         System.out.println(treeSet);
         messageService.delete(m2);
         treeSet = messageService.getAll();
-        System.out.println(treeSet);
+        System.out.println(treeSet);*/
+        Message m = messageService.getByID((long)64);
+        m.setContent("content changed 2");
+        messageService.saveOrUpdate(m);
     }
 }

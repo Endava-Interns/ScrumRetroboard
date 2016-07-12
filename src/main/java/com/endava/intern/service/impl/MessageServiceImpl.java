@@ -22,7 +22,7 @@ public class MessageServiceImpl implements MessageService{
 
 
     @Override
-    public void save(Message m) {
+    public void saveOrUpdate(Message m) {
         messageRepository.save(m);
     }
 
@@ -37,4 +37,11 @@ public class MessageServiceImpl implements MessageService{
         set.addAll((Collection<Message>)messageRepository.findAll());
         return set;
     }
+
+    @Override
+    public Message getByID(Long id) {
+        return messageRepository.findOne(id);
+    }
+
+
 }
