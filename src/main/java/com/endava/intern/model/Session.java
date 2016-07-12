@@ -32,7 +32,6 @@ public class Session {
 
     public Session() {
         isChanged = false;
-        //generateSessionID();
     }
 
 

@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "endava_scrum_db.dbo.Messages")
-public class Message {
+public class Message implements Comparable<Message>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +18,7 @@ public class Message {
     private MessageCategory category;
 
     @ManyToOne
+    @Column(name = "user_id")
     private User user;
 
     public Message(){}
@@ -26,6 +27,18 @@ public class Message {
         this.content = content;
         this.category = category;
         this.user = user;
+    }
+
+    @Override
+    public int compareTo(Message m) {
+        if(category == m.category) {
+            return Long.compare(id,m.getId());
+        }
+        return category.compareTo(m.category);
+    }
+
+    public String toString() {
+        return content;
     }
 
     public void setContent(String content) {
