@@ -27,6 +27,11 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
+    public void delete(Message m) {
+        messageRepository.delete(m);
+    }
+
+    @Override
     public Set<Message> getAll() {
         Set<Message> set = new TreeSet<>();
         set.addAll((Collection<Message>)messageRepository.findAll());

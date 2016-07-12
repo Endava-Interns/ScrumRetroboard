@@ -12,5 +12,6 @@ import java.util.Set;
 @Service
 public interface MessageService {
     void save(Message m);
+    void delete(Message m);
     Set<Message> getAll();
 }

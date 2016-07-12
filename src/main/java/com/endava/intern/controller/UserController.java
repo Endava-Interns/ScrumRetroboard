@@ -39,14 +39,20 @@ public class UserController {
         sessionService.saveSession(s);
         User u = new User("Simona", s);
         userService.saveUser(u);
-        Message m = new Message("content of the message","Continue",u);
-        messageService.save(m);
-        m = new Message("content of the message2","Stop",u);
-        messageService.save(m);
+        Message m1 = new Message("content of the message", "Continue", u);
+        messageService.save(m1);
+        Message m2 = new Message("content of the message to be deleted", "Stop", u);
+        messageService.save(m2);
         System.out.println(u.getSession());
         User user = userService.getUserByUsername("Simona").get(0);
         System.out.println(user.getId());
         Set<Message> treeSet = messageService.getAll();
+        System.out.println(treeSet);
+        messageService.delete(m1);
+        treeSet = messageService.getAll();
+        System.out.println(treeSet);
+        messageService.delete(m2);
+        treeSet = messageService.getAll();
         System.out.println(treeSet);
     }
 }
