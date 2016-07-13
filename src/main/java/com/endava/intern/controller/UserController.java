@@ -58,9 +58,9 @@ public class UserController {
         messageService.delete(m2);
         treeSet = messageService.getAll();
         System.out.println(treeSet);*/
-        Message m = messageService.getByID((long)64);
-        m.setContent("content changed 3");
-        messageService.saveOrUpdate(m);
+       // Message m = messageService.getByID((long)64);
+        //m.setContent("content changed 3");
+        //messageService.saveOrUpdate(m);
         System.out.println("HERE");
     }
 }
