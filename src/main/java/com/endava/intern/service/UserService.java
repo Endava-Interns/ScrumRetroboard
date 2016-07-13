@@ -9,7 +9,6 @@ import java.util.List;
  * Created by sstamenkova on 7/8/2016.
  */
 
-@Service
 public interface UserService {
     void saveUser(User u);
     List<User> getUserByUsername(String username);

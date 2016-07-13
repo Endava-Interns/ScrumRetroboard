@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
  * Created by sstamenkova on 7/11/2016.
  */
 
-@Repository
 public interface SessionRepository extends CrudRepository<Session, String> {
 
 }

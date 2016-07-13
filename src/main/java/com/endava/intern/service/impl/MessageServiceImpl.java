@@ -5,6 +5,7 @@ import com.endava.intern.repository.MessageRepository;
 import com.endava.intern.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Set;
@@ -14,7 +15,7 @@ import java.util.TreeSet;
  * Created by jarsov on 7/12/2016.
  */
 
-@Component
+@Service("messageService")
 public class MessageServiceImpl implements MessageService{
 
     @Autowired

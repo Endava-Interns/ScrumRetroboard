@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by sstamenkova on 7/8/2016.
  */
-@Repository
+
 public interface UserRepository extends CrudRepository<User, Long> {
 
     List<User> findByUsername(String name);

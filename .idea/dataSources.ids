@@ -13,7 +13,7 @@
       </database>
       <schema id="2" parent="1" name="dbo">
         <object-id>1</object-id>
-        <introspection-timestamp>2016-07-12.12:35:19.940</introspection-timestamp>
+        <introspection-timestamp>2016-07-13.07:38:46.253</introspection-timestamp>
       </schema>
       <table id="3" parent="2" name="Messages">
         <object-id>1301579675</object-id>
@@ -94,7 +94,7 @@
       <column id="15" parent="3" name="message_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(4)</sequence-identity>
+        <sequence-identity>1(65)</sequence-identity>
       </column>
       <column id="16" parent="3" name="text">
         <mandatory>1</mandatory>
@@ -217,7 +217,7 @@ name</columns>
       <column id="36" parent="6" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(12)</sequence-identity>
+        <sequence-identity>1(55)</sequence-identity>
       </column>
       <column id="37" parent="6" name="session_id">
         <mandatory>1</mandatory>

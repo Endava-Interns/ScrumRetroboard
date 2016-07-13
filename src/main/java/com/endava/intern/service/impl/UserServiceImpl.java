@@ -13,7 +13,7 @@ import java.util.List;
  * Created by sstamenkova on 7/8/2016.
  */
 
-@Component
+@Service ("userService")
 public class UserServiceImpl implements UserService {
 
     @Autowired

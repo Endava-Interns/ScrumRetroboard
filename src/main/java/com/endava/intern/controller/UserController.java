@@ -8,8 +8,10 @@ import com.endava.intern.service.MessageService;
 import com.endava.intern.service.SessionService;
 import com.endava.intern.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.endava.intern.service.UserService;
 
@@ -20,7 +22,8 @@ import java.util.TreeSet;
 /**
  * Created by sstamenkova on 7/8/2016.
  */
-@RestController
+
+@Controller ("userController")
 public class UserController {
 
     @Autowired
@@ -32,8 +35,8 @@ public class UserController {
     @Autowired
     MessageService messageService;
 
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
+    @ResponseBody
     public void newUser(){
         Session s = new Session();
         sessionService.saveSession(s);
@@ -56,7 +59,8 @@ public class UserController {
         treeSet = messageService.getAll();
         System.out.println(treeSet);*/
         Message m = messageService.getByID((long)64);
-        m.setContent("content changed 2");
+        m.setContent("content changed 3");
         messageService.saveOrUpdate(m);
+        System.out.println("HERE");
     }
 }
