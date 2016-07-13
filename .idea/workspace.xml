@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c588a5f-b55e-48ec-ac3a-c8eaf7c917e4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
     </list>
     <ignored path="ScrumRetroBoardJava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -963,7 +962,7 @@
       <workItem from="1468395181297" duration="233000" />
       <workItem from="1468395499553" duration="1990000" />
       <workItem from="1468406889917" duration="1254000" />
-      <workItem from="1468408393362" duration="806000" />
+      <workItem from="1468408393362" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="MessageService add">
       <created>1468313373985</created>
@@ -986,11 +985,18 @@
       <option name="project" value="LOCAL" />
       <updated>1468408687256</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modify Procfile">
+      <created>1468409209589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1468409209589</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13435000" />
+    <option name="totallyTimeSpent" value="13444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
