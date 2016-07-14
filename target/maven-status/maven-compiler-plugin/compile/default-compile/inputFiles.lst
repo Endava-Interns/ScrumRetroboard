@@ -1,1 +1,16 @@
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/repository/SessionRepository.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/model/User.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/model/Message.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/UserService.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/impl/SessionServiceImpl.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/MessageService.java
 /home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/ScrumRetroBoardJavaApplication.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/controller/MessageController.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/repository/UserRepository.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/repository/MessageRepository.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/controller/UserController.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/model/Session.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/service/SessionService.java
+/home/snajdov/IdeaProjects/ScrumRetroboardJava/src/main/java/com/endava/intern/model/MessageCategory.java
