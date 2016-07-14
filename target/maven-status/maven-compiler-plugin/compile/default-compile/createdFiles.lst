@@ -1,1 +1,16 @@
+com/endava/intern/model/User.class
+com/endava/intern/model/MessageCategory.class
+com/endava/intern/service/SessionService.class
+com/endava/intern/repository/SessionRepository.class
+com/endava/intern/controller/UserController.class
+com/endava/intern/service/MessageService.class
+com/endava/intern/repository/MessageRepository.class
+com/endava/intern/model/Session.class
+com/endava/intern/service/impl/SessionServiceImpl.class
+com/endava/intern/service/impl/UserServiceImpl.class
+com/endava/intern/service/UserService.class
+com/endava/intern/model/Message.class
+com/endava/intern/service/impl/MessageServiceImpl.class
 com/endava/intern/ScrumRetroBoardJavaApplication.class
+com/endava/intern/repository/UserRepository.class
+com/endava/intern/controller/MessageController.class
