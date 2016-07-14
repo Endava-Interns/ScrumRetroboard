@@ -16,5 +16,6 @@ public interface UserService {
     void deleteUserByID(Integer ID);
     List<User> getAllUsers();
     List<User> getUserBySessionId(String id);
+    User getUserById(Integer id);
 
 }

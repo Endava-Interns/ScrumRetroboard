@@ -48,5 +48,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findBySessionId(id);
     }
 
+    @Override
+    public User getUserById(Integer id) {
+        return userRepository.findOne(id);
+    }
+
 
 }

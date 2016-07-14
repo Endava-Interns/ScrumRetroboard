@@ -13,7 +13,7 @@ public class Message implements Comparable<Message>{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "message_id")
-    private Long id;
+    private Integer id;
     @Column(name = "text")
     private String content;
     private String category;
@@ -58,7 +58,7 @@ public class Message implements Comparable<Message>{
         return content;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c588a5f-b55e-48ec-ac3a-c8eaf7c917e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Session.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Session.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/SessionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/SessionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/SessionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/SessionServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java" />
     </list>
     <ignored path="ScrumRetroBoardJava.iws" />
@@ -110,6 +111,10 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Messages" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -118,53 +123,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding>
                 <element signature="e#1539#1540#0" expanded="true" />
                 <element signature="e#1596#1597#0" expanded="true" />
+                <element signature="e#1698#1699#0" expanded="true" />
                 <element signature="e#1746#1747#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepository.java">
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/Session.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="67" column="15" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            <state relative-caret-position="408">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#992#993#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,9 +183,24 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+            <state relative-caret-position="255">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+              <folding>
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+                <element signature="e#1340#1341#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,27 +228,27 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/id/SessionIdGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/MessageCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java" />
         <option value="dbtable:/b20b4b5c/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Messages" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/SessionRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/ScrumRetroBoardJavaApplication.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/SessionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/SessionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Session.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java" />
       </list>
     </option>
   </component>
@@ -1017,7 +1043,7 @@
       <workItem from="1468483373071" duration="1360000" />
       <workItem from="1468486011774" duration="685000" />
       <workItem from="1468488284685" duration="1025000" />
-      <workItem from="1468495194662" duration="3636000" />
+      <workItem from="1468495194662" duration="8006000" />
     </task>
     <task id="LOCAL-00001" summary="MessageService add">
       <created>1468313373985</created>
@@ -1058,7 +1084,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20150000" />
+    <option name="totallyTimeSpent" value="24520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1148,24 +1174,10 @@
     <entry file="dbDummy://dbtable:/c8a4f50f/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Messages" />
     <entry file="dbDummy://dbtable:/c8a4f50f/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Users" />
     <entry file="dbDummy://dbtable:/c8a4f50f/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Session" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/MessageCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/ScrumRetroBoardJavaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1187,38 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#666#667#0" expanded="false" />
-            <element signature="e#707#708#0" expanded="false" />
-            <element signature="e#758#759#0" expanded="false" />
-            <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-            <element signature="e#1096#1097#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,43 +1251,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Messages">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Users">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/SessionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1316,51 +1259,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Session">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/MessageCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="255">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding>
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1380,14 +1291,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Session">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/repository/MessageRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding>
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        <state relative-caret-position="374">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
           <folding>
             <element signature="e#1539#1540#0" expanded="true" />
             <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
             <element signature="e#1746#1747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/76b44fc9/fda9d62f-eead-49a0-adb9-f70322fd043c/endava_scrum_db.dbo.Messages">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/endava/intern/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

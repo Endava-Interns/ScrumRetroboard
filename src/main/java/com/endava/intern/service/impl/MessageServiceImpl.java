@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -28,20 +29,26 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
-    public void delete(Message m) {
-        messageRepository.delete(m);
+    public void delete(Integer id) {
+        messageRepository.delete(id);
     }
 
     @Override
-    public Set<Message> getAll() {
-        Set<Message> set = new TreeSet<>();
-        set.addAll((Collection<Message>)messageRepository.findAll());
-        return set;
+    public List<Message> getAll() {
+       // List<Message> set = new TreeSet<>();
+        //set.addAll((Collection<Message>)messageRepository.findAll());
+        //return set;
+        return (List<Message>) messageRepository.findAll();
     }
 
     @Override
-    public Message getByID(Long id) {
+    public Message getByID(Integer id) {
         return messageRepository.findOne(id);
+    }
+
+    @Override
+    public Set<Message> getAllMessagesByCategory(String category) {
+        return messageRepository.findByCategory(category);
     }
 
 

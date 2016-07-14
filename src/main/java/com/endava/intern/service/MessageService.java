@@ -3,6 +3,7 @@ package com.endava.intern.service;
 import com.endava.intern.model.Message;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,7 +12,8 @@ import java.util.Set;
 
 public interface MessageService {
     void saveOrUpdate(Message m);
-    void delete(Message m);
-    Set<Message> getAll();
-    Message getByID(Long id);
+    void delete(Integer id);
+    List<Message> getAll();
+    Message getByID(Integer id);
+    Set<Message> getAllMessagesByCategory(String category);
 }

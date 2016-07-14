@@ -24,9 +24,6 @@ public class User{
 
     private String username;
 
-    @OneToMany(mappedBy = "user")
-    Set<Message> messages;
-
     public User (){}
 
     public User(Session session) {
@@ -36,15 +33,6 @@ public class User{
     public User(String name, Session session) {
         this.username = name;
         this.session = session;
-        messages = new TreeSet<>();
-    }
-
-    public void addMessage(Message message) {
-        messages.add(message);
-    }
-
-    public Set<Message> getMessages() {
-        return messages;
     }
 
     public void setUsername(String username) {
