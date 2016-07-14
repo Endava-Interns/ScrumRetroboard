@@ -27,8 +27,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     Set<Message> messages;
 
-    public User() {
-        super();
+    public User(Session session) {
+        this.session = session;
     }
 
     public User(String name, Session session) {
