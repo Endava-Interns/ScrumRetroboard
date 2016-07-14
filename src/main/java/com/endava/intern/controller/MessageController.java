@@ -15,7 +15,7 @@ import java.util.Set;
  * Created by jarsov on 7/14/2016.
  */
 
-@Controller
+@RestController
 @RequestMapping("/messages")
 public class MessageController {
 

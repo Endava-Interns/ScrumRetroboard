@@ -8,6 +8,7 @@ import com.endava.intern.service.MessageService;
 import com.endava.intern.service.SessionService;
 import com.endava.intern.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import com.endava.intern.service.UserService;
@@ -20,8 +21,8 @@ import java.util.TreeSet;
  * Created by sstamenkova on 7/8/2016.
  */
 
-@Controller ("userController")
-@RequestMapping(value = "/users")
+@RestController ("userController")
+@RequestMapping(value = "/users" , produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
     @Autowired
