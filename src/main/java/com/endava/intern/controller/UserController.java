@@ -21,26 +21,37 @@ import java.util.TreeSet;
  * Created by sstamenkova on 7/8/2016.
  */
 
-@RestController ("userController")
+@RestController
 @RequestMapping(value = "/users" , produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
     @Autowired
     UserService userService;
 
+    @Autowired
+    SessionService sessionService;
+
     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public void newUser(@RequestParam String username,@RequestBody Session session){
-        User u = new User(username,session);
+    public void newUser(@RequestParam String username, @RequestParam String id){
+        Session s = sessionService.findSessionById(id);
+        User u = new User(username,s);
         userService.saveUser(u);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public void deleteUser(@RequestBody User user) {
-        userService.deleteUser(user);
+    public void deleteUser(@RequestParam Integer id) {
+        userService.deleteUserByID(id);
+    }
+
+    @RequestMapping(value = "/all", method = RequestMethod.POST)
+    public List<User> getAllUsersBySessionId(@RequestParam String id) {
+        return userService.getUserBySessionId(id);
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<User> getAllUsers(@RequestBody String userName) {
-        return userService.getUserByUsername(userName);
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
     }
+
+
 }

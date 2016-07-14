@@ -26,7 +26,8 @@ public class Session {
     }
 
     @Id
-    private String session_id;
+    @Column(name = "session_id")
+    private String id;
     @Column(name = "is_changed")
     private boolean isChanged;
 
@@ -42,16 +43,16 @@ public class Session {
             int randomNum = r.nextInt(62);
             s.append(alphabet[randomNum]);
         }
-        session_id = s.toString();
+        id = s.toString();
     }
 
     public Session(String sessionID, boolean isChanged) {
-        this.session_id = sessionID;
+        this.id = sessionID;
         this.isChanged = isChanged;
     }
 
     public String getSessionID() {
-        return session_id;
+        return id;
     }
 
     public boolean isChanged() {
@@ -64,6 +65,6 @@ public class Session {
 
     @Override
     public String toString() {
-        return session_id;
+        return id;
     }
 }

@@ -13,6 +13,8 @@ public interface UserService {
     void saveUser(User u);
     List<User> getUserByUsername(String username);
     void deleteUser(User u);
-    void deleteUserByID(Long ID);
+    void deleteUserByID(Integer ID);
+    List<User> getAllUsers();
+    List<User> getUserBySessionId(String id);
 
 }

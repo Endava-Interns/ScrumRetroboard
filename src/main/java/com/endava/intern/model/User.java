@@ -12,13 +12,13 @@ import java.util.*;
 
 @Entity
 @Table(name = "endava_scrum_db.dbo.Users")
-public class User {
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int user_id;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "session_id")
     private Session session;
 
@@ -26,6 +26,8 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     Set<Message> messages;
+
+    public User (){}
 
     public User(Session session) {
         this.session = session;

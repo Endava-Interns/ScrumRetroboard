@@ -21,4 +21,11 @@ public class SessionServiceImpl implements SessionService {
     public void saveSession(Session s) {
         sessionRepository.save(s);
     }
+
+    @Override
+    public Session findSessionById(String id) {
+        return sessionRepository.findOne(id);
+    }
+
+
 }
