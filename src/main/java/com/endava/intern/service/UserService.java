@@ -17,5 +17,6 @@ public interface UserService {
     List<User> getAllUsers();
     List<User> getUserBySessionId(String id);
     User getUserById(Integer id);
+    long count();
 
 }

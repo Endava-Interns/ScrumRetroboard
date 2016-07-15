@@ -53,5 +53,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findOne(id);
     }
 
+    @Override
+    public long count() {
+        return userRepository.count();
+    }
+
 
 }

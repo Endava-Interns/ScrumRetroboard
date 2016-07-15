@@ -54,5 +54,8 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-
+    @RequestMapping(value = "/count", method = RequestMethod.GET)
+    public long countUsers(){
+        return userService.count();
+    }
 }
