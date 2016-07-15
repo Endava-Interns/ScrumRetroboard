@@ -32,10 +32,11 @@ public class UserController {
     SessionService sessionService;
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public void newUser(@RequestParam String username, @RequestParam String id){
+    public User newUser(@RequestParam String username, @RequestParam String id){
         Session s = sessionService.findSessionById(id);
         User u = new User(username,s);
         userService.saveUser(u);
+        return u;
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
