@@ -44,8 +44,8 @@ public class UserController {
         userService.deleteUserByID(id);
     }
 
-    @RequestMapping(value = "/all", method = RequestMethod.POST)
-    public List<User> getAllUsersBySessionId(@RequestParam String id) {
+    @RequestMapping(value = "/all/{sid}", method = RequestMethod.GET)
+    public List<User> getAllUsersBySessionId(@PathVariable("sid") String id) {
         return userService.getUserBySessionId(id);
     }
 
