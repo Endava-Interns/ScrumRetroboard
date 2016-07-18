@@ -17,11 +17,10 @@ import java.util.TreeSet;
  */
 
 @Service("messageService")
-public class MessageServiceImpl implements MessageService{
+public class MessageServiceImpl implements MessageService {
 
     @Autowired
     MessageRepository messageRepository;
-
 
     @Override
     public void saveOrUpdate(Message m) {
@@ -50,6 +49,5 @@ public class MessageServiceImpl implements MessageService{
     public Set<Message> getAllMessagesByCategory(String category) {
         return messageRepository.findByCategory(category);
     }
-
 
 }

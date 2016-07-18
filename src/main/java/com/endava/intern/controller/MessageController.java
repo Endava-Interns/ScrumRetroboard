@@ -32,8 +32,8 @@ public class MessageController {
         return messageService.getAll();
     }
 
-    @RequestMapping(value = "/all", method = RequestMethod.POST)
-    public Set<Message> getAllMessagesByCategory(@RequestParam String category)
+    @RequestMapping(value = "/all/{category}", method = RequestMethod.GET)
+    public Set<Message> getAllMessagesByCategory(@PathVariable("category") String category)
     {
         return messageService.getAllMessagesByCategory(category);
     }
