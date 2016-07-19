@@ -39,14 +39,14 @@ public class UserController {
         return u;
     }
 
-    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
-    public void updateUser(@PathVariable("id") Integer uid) {
-        userService.updateUser(uid);
+    @RequestMapping(value = "/update/{sid}/{id}", method = RequestMethod.GET)
+    public void updateUser(@PathVariable("sid") String sid, @PathVariable("id") Integer uid) {
+        userService.updateUser(sid, uid);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public void deleteUser(@RequestParam Integer id) {
-        userService.deleteUserByID(id);
+    public void deleteUser(@RequestParam Integer id, @RequestParam String sid) {
+        userService.deleteUserByID(id, sid);
     }
 
     @RequestMapping(value = "/all/{sid}", method = RequestMethod.GET)

@@ -1,13 +1,20 @@
 package com.endava.intern.service.impl;
 
 import com.endava.intern.model.ActiveUser;
+import com.endava.intern.model.Session;
 import com.endava.intern.model.User;
+import com.endava.intern.repository.SessionRepository;
 import com.endava.intern.repository.UserRepository;
+import com.endava.intern.service.SessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.endava.intern.service.UserService;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.net.URI;
 import java.util.*;
 
 import static java.lang.Thread.sleep;
@@ -22,6 +29,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private SessionService sessionService;
+
     private ActiveUsers activeUsers;
 
     private UserService threadUserService = this;
@@ -30,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
         private UserService userService = threadUserService;
 
-        Map<Integer, ActiveUser> activeUsers;
+        Map<String, Map<Integer, ActiveUser>> activeUsers;
 
         @Override
         public void run() {
@@ -38,33 +48,49 @@ public class UserServiceImpl implements UserService {
 
             while (true) {
 
+                System.out.println("1111111111");
+
                 try {
                     sleep(4500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
-                for (Iterator<ActiveUser> it = activeUsers.values().iterator(); it.hasNext(); ) {
-                    ActiveUser activeUser = it.next();
+                for (Iterator<Map<Integer, ActiveUser>> it = activeUsers.values().iterator(); it.hasNext(); ) {
+                    Map<Integer, ActiveUser> listActiveUsers = it.next();
 
-                    if (!activeUser.isActive()) {
-                        userService.deleteUserByID(activeUser.getId());
-                        System.out.println("USER " + activeUser.getId() + " WAS DELETED");
-                        it.remove();
-                    } else {
-                        activeUser.setActive(false);
-                        System.out.println("ACTIVE USER: " + activeUser.getId());
+                    System.out.println("2222222222222");
+
+                    for (Iterator<ActiveUser> ij = listActiveUsers.values().iterator(); ij.hasNext(); ) {
+                        ActiveUser activeUser = ij.next();
+
+                        if (!activeUser.isActive()) {
+                            ij.remove();
+                            userService.deleteUserByID(activeUser.getId(), activeUser.getSid());
+                            System.out.println("USER " + activeUser.getId() + " WAS DELETED");
+                            System.out.println("SDKJFLSDJFLKSDJFKL: " + listActiveUsers.values().size());
+                        } else {
+                            activeUser.setActive(false);
+                            System.out.println("ACTIVE USER: " + activeUser.getId());
+                        }
                     }
+
                 }
             }
         }
 
-        public void addUser(Integer id) {
-            activeUsers.put(id, new ActiveUser(id));
+        public void addUser(String sid, Integer id) {
+            Map<Integer, ActiveUser> listActive = activeUsers.get(sid);
+            if (listActive == null) {
+                listActive = new HashMap<>();
+                activeUsers.put(sid, listActive);
+            }
+            listActive.put(id, new ActiveUser(id, sid));
         }
 
-        public void updateUser(Integer id) {
-            ActiveUser activeUser = activeUsers.get(id);
+        public void updateUser(String sid, Integer id) {
+            Map<Integer, ActiveUser> listActive = activeUsers.get(sid);
+            ActiveUser activeUser = listActive.get(id);
             if (activeUser != null)
                 activeUser.setActive(true);
         }
@@ -75,13 +101,13 @@ public class UserServiceImpl implements UserService {
         activeUsers.start();
     }
 
-    public void updateUser(Integer id) {
-        activeUsers.updateUser(id);
+    public void updateUser(String sid, Integer id) {
+        activeUsers.updateUser(sid, id);
     }
 
     public void saveUser(User u) {
         userRepository.save(u);
-        activeUsers.addUser(u.getId());
+        activeUsers.addUser(u.getSession().getSessionID(), u.getId());
     }
 
     @Override
@@ -95,8 +121,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUserByID(Integer ID) {
-        userRepository.delete(ID);
+    public void deleteUserByID(Integer id, String sid) {
+        userRepository.delete(id);
+
+
+        System.out.println(activeUsers.activeUsers.get(sid).values().size());
+        if (activeUsers.activeUsers.get(sid).size() == 0) {
+            sessionService.deleteSesssion(sid);
+        }
     }
 
     @Override

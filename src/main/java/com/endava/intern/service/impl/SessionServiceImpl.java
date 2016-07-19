@@ -27,5 +27,9 @@ public class SessionServiceImpl implements SessionService {
         return sessionRepository.findOne(id);
     }
 
+    @Override
+    public void deleteSesssion(String sid) {
+        sessionRepository.delete(sid);
+    }
 
 }

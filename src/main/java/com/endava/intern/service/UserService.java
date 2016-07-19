@@ -13,11 +13,11 @@ public interface UserService {
     void saveUser(User u);
     List<User> getUserByUsername(String username);
     void deleteUser(User u);
-    void deleteUserByID(Integer ID);
+    void deleteUserByID(Integer ID, String sid);
     List<User> getAllUsers();
     List<User> getUserBySessionId(String id);
     User getUserById(Integer id);
-    public void updateUser(Integer id);
+    public void updateUser(String sid, Integer id);
     long count();
 
 }

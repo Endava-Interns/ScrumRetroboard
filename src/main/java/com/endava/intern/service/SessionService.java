@@ -10,5 +10,6 @@ import org.springframework.stereotype.Service;
 public interface SessionService {
     void saveSession(Session s);
     Session findSessionById(String id);
+    void deleteSesssion(String sid);
 
 }

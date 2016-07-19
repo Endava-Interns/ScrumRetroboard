@@ -6,14 +6,16 @@ package com.endava.intern.model;
 public class ActiveUser {
 
     private int id;
+    private String sid;
     private boolean active;
 
     public ActiveUser() {
         super();
     }
 
-    public ActiveUser(int id) {
+    public ActiveUser(int id, String sid) {
         this.id = id;
+        this.sid = sid;
         active = true;
     }
 
@@ -31,6 +33,10 @@ public class ActiveUser {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public String getSid() {
+        return sid;
     }
 
 }
