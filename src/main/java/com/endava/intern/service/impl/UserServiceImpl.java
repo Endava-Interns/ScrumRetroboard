@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
             while (true) {
 
                 try {
-                    sleep(8000);
+                    sleep(4500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
                         it.remove();
                     } else {
                         activeUser.setActive(false);
-                        // System.out.println("ACTIVE USER" + activeUser.getId());
+                        System.out.println("ACTIVE USER" + activeUser.getId());
                     }
                 }
             }

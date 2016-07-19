@@ -39,7 +39,7 @@ public class UserController {
         return u;
     }
 
-    @RequestMapping(value = "/update/{id}")
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
     public void updateUser(@PathVariable("id") Integer uid) {
         userService.updateUser(uid);
     }
