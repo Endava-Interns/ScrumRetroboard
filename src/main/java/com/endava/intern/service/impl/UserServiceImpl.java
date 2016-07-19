@@ -49,10 +49,11 @@ public class UserServiceImpl implements UserService {
 
                     if (!activeUser.isActive()) {
                         userService.deleteUserByID(activeUser.getId());
+                        System.out.println("USER " + activeUser.getId() + " WAS DELETED");
                         it.remove();
                     } else {
                         activeUser.setActive(false);
-                        System.out.println("ACTIVE USER" + activeUser.getId());
+                        System.out.println("ACTIVE USER: " + activeUser.getId());
                     }
                 }
             }
