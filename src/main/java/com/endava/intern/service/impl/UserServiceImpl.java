@@ -8,10 +8,7 @@ import com.endava.intern.service.UserService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static java.lang.Thread.sleep;
 
@@ -33,11 +30,11 @@ public class UserServiceImpl implements UserService {
 
         private UserService userService = threadUserService;
 
-        Set<ActiveUser> activeUsers;
+        Map<Integer, ActiveUser> activeUsers;
 
         @Override
         public void run() {
-            activeUsers = new HashSet<ActiveUser>();
+            activeUsers = new HashMap<>();
 
             while (true) {
 
@@ -47,7 +44,7 @@ public class UserServiceImpl implements UserService {
                     e.printStackTrace();
                 }
 
-                for (Iterator<ActiveUser> it = activeUsers.iterator(); it.hasNext(); ) {
+                for (Iterator<ActiveUser> it = activeUsers.values().iterator(); it.hasNext(); ) {
                     ActiveUser activeUser = it.next();
 
                     if (!activeUser.isActive()) {
@@ -55,19 +52,30 @@ public class UserServiceImpl implements UserService {
                         it.remove();
                     } else {
                         activeUser.setActive(false);
+                        // System.out.println("ACTIVE USER" + activeUser.getId());
                     }
                 }
             }
         }
 
         public void addUser(Integer id) {
-            activeUsers.add(new ActiveUser(id));
+            activeUsers.put(id, new ActiveUser(id));
+        }
+
+        public void updateUser(Integer id) {
+            ActiveUser activeUser = activeUsers.get(id);
+            if (activeUser != null)
+                activeUser.setActive(true);
         }
     }
 
     public UserServiceImpl() {
         activeUsers = new ActiveUsers();
         activeUsers.start();
+    }
+
+    public void updateUser(Integer id) {
+        activeUsers.updateUser(id);
     }
 
     public void saveUser(User u) {

@@ -39,6 +39,11 @@ public class UserController {
         return u;
     }
 
+    @RequestMapping(value = "/update/{id}")
+    public void updateUser(@PathVariable("id") Integer uid) {
+        userService.updateUser(uid);
+    }
+
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public void deleteUser(@RequestParam Integer id) {
         userService.deleteUserByID(id);
