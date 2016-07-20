@@ -10,14 +10,14 @@ import java.util.List;
  */
 
 public interface UserService {
-    void saveUser(User u);
+    void saveUser(User u) throws InterruptedException;
     List<User> getUserByUsername(String username);
     void deleteUser(User u);
-    void deleteUserByID(Integer ID, String sid);
+    void deleteUserByID(Integer ID, String sid) throws InterruptedException;
     List<User> getAllUsers();
     List<User> getUserBySessionId(String id);
     User getUserById(Integer id);
-    public void updateUser(String sid, Integer id);
+    public void updateUser(String sid, Integer id) throws InterruptedException;
     long count();
 
 }

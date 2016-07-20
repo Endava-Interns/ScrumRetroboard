@@ -32,7 +32,7 @@ public class UserController {
     SessionService sessionService;
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public User newUser(@RequestParam String username, @RequestParam String id){
+    public User newUser(@RequestParam String username, @RequestParam String id) throws InterruptedException {
         Session s = sessionService.findSessionById(id);
         User u = new User(username,s);
         userService.saveUser(u);
@@ -40,12 +40,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/update/{sid}/{id}", method = RequestMethod.GET)
-    public void updateUser(@PathVariable("sid") String sid, @PathVariable("id") Integer uid) {
+    public void updateUser(@PathVariable("sid") String sid, @PathVariable("id") Integer uid) throws InterruptedException {
         userService.updateUser(sid, uid);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public void deleteUser(@RequestParam Integer id, @RequestParam String sid) {
+    public void deleteUser(@RequestParam Integer id, @RequestParam String sid) throws InterruptedException {
         userService.deleteUserByID(id, sid);
     }
 

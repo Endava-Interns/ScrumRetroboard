@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.net.URI;
 import java.util.*;
+import java.util.concurrent.Semaphore;
 
 import static java.lang.Thread.sleep;
 
@@ -28,86 +29,132 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private SessionService sessionService;
-
-    private ActiveUsers activeUsers;
-
+    private ActiveUsers data;
     private UserService threadUserService = this;
+    private static Semaphore mutex;
+    private static boolean toBreak;
 
-    private class ActiveUsers extends Thread{
+    private class ActiveUsers extends Thread {
 
         private UserService userService = threadUserService;
-
-        Map<String, Map<Integer, ActiveUser>> activeUsers;
+        private Map<String, List<ActiveUser>> activeUsers;
+        private Iterator<Map.Entry<String, List<ActiveUser>>> sessionIterator;
+        private Iterator<ActiveUser> userIterator;
+        private List<ActiveUser> listActiveUsers;
+        private ActiveUser currentUser;
 
         @Override
         public void run() {
+
             activeUsers = new HashMap<>();
 
             while (true) {
 
-                System.out.println("1111111111");
+                System.out.println("HERE");
 
                 try {
                     sleep(4500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
 
-                for (Iterator<Map<Integer, ActiveUser>> it = activeUsers.values().iterator(); it.hasNext(); ) {
-                    Map<Integer, ActiveUser> listActiveUsers = it.next();
+                try {
+                    mutex.acquire();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
 
-                    System.out.println("2222222222222");
 
-                    for (Iterator<ActiveUser> ij = listActiveUsers.values().iterator(); ij.hasNext(); ) {
-                        ActiveUser activeUser = ij.next();
+                for (sessionIterator = activeUsers.entrySet().iterator(); sessionIterator.hasNext(); ) {
+                    Map.Entry<String, List<ActiveUser>> currentList = sessionIterator.next();
+                    listActiveUsers = currentList.getValue();
 
-                        if (!activeUser.isActive()) {
-                            ij.remove();
-                            userService.deleteUserByID(activeUser.getId(), activeUser.getSid());
-                            System.out.println("USER " + activeUser.getId() + " WAS DELETED");
-                            System.out.println("SDKJFLSDJFLKSDJFKL: " + listActiveUsers.values().size());
-                        } else {
-                            activeUser.setActive(false);
-                            System.out.println("ACTIVE USER: " + activeUser.getId());
+                    for (userIterator = listActiveUsers.listIterator(); userIterator.hasNext(); ) {
+                        currentUser = userIterator.next();
+
+                        if (currentUser != null) {
+                            if (currentUser.isActive()) {
+                                System.out.println("ACTIVE USER: " + currentUser.getId());
+                                currentUser.setActive(false);
+                            } else {
+                                System.out.println("DELETE USER: " + currentUser.getId());
+                                userIterator.remove();
+                                try {
+                                    userService.deleteUserByID(currentUser.getId(), currentUser.getSid());
+
+                                    System.out.println("MININSDFINSIDFNISDNFINSDFINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
+
+                                    if (data.activeUsers.get(currentUser.getSid()).size() == 0) {
+                                        System.out.println("HLSDKJFLKSDJFKLJSDKLFJLSDJFKLSDJFLKJSDLKFJ");
+                                        sessionIterator.remove();
+                                        sessionService.deleteSesssion(currentUser.getSid());
+                                        toBreak = true;
+                                    }
+
+                                    if (toBreak)
+                                        break;
+
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
                         }
                     }
 
+                    if (toBreak) {
+                        toBreak = false;
+                        break;
+                    }
+
                 }
+
+                mutex.release();
+
             }
+
         }
 
-        public void addUser(String sid, Integer id) {
-            Map<Integer, ActiveUser> listActive = activeUsers.get(sid);
+        public void addUser(String sid, Integer id) throws InterruptedException {
+            List<ActiveUser> listActive = activeUsers.get(sid);
             if (listActive == null) {
-                listActive = new HashMap<>();
+                listActive = new ArrayList<>();
                 activeUsers.put(sid, listActive);
             }
-            listActive.put(id, new ActiveUser(id, sid));
+            listActive.add(new ActiveUser(id, sid));
         }
 
-        public void updateUser(String sid, Integer id) {
-            Map<Integer, ActiveUser> listActive = activeUsers.get(sid);
-            ActiveUser activeUser = listActive.get(id);
-            if (activeUser != null)
-                activeUser.setActive(true);
+        public void updateUser(String sid, Integer id) throws InterruptedException {
+            List<ActiveUser> listActive = activeUsers.get(sid);
+
+            for (ActiveUser activeUser : listActive) {
+                if (activeUser.getId() == id) {
+                    activeUser.setActive(true);
+                    break;
+                }
+            }
         }
     }
 
     public UserServiceImpl() {
-        activeUsers = new ActiveUsers();
-        activeUsers.start();
+        toBreak = false;
+        mutex = new Semaphore(1);
+        data = new ActiveUsers();
+        data.start();
     }
 
-    public void updateUser(String sid, Integer id) {
-        activeUsers.updateUser(sid, id);
+    public void updateUser(String sid, Integer id) throws InterruptedException {
+        mutex.acquire();
+        data.updateUser(sid, id);
+        mutex.release();
     }
 
-    public void saveUser(User u) {
+    public void saveUser(User u) throws InterruptedException {
         userRepository.save(u);
-        activeUsers.addUser(u.getSession().getSessionID(), u.getId());
+        mutex.acquire();
+        data.addUser(u.getSession().getSessionID(), u.getId());
+        mutex.release();
     }
 
     @Override
@@ -121,14 +168,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUserByID(Integer id, String sid) {
+    public void deleteUserByID(Integer id, String sid) throws InterruptedException {
         userRepository.delete(id);
-
-
-        System.out.println(activeUsers.activeUsers.get(sid).values().size());
-        if (activeUsers.activeUsers.get(sid).size() == 0) {
-            sessionService.deleteSesssion(sid);
-        }
     }
 
     @Override
