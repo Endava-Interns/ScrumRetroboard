@@ -45,6 +45,8 @@ public class UserServiceImpl implements UserService {
         private List<ActiveUser> listActiveUsers;
         private ActiveUser currentUser;
 
+
+        // It is awful, I know.
         @Override
         public void run() {
 
@@ -52,7 +54,7 @@ public class UserServiceImpl implements UserService {
 
             while (true) {
 
-                System.out.println("HERE");
+                System.out.println('.');
 
                 try {
                     sleep(4500);
@@ -84,17 +86,14 @@ public class UserServiceImpl implements UserService {
                                 try {
                                     userService.deleteUserByID(currentUser.getId(), currentUser.getSid());
 
-                                    System.out.println("MININSDFINSIDFNISDNFINSDFINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
-
-                                    /*if (data.activeUsers.get(currentUser.getSid()).size() == 0) {
-                                        System.out.println("HLSDKJFLKSDJFKLJSDKLFJLSDJFKLSDJFLKJSDLKFJ");
+                                    if (data.activeUsers.get(currentUser.getSid()).size() == 0) {
                                         sessionIterator.remove();
                                         sessionService.deleteSesssion(currentUser.getSid());
                                         toBreak = true;
-                                    }*/
+                                    }
 
-                                    /*if (toBreak)
-                                        break;*/
+                                    if (toBreak)
+                                        break;
 
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
@@ -103,10 +102,10 @@ public class UserServiceImpl implements UserService {
                         }
                     }
 
-                    /*if (toBreak) {
+                    if (toBreak) {
                         toBreak = false;
                         break;
-                    }*/
+                    }
 
                 }
 
@@ -128,8 +127,11 @@ public class UserServiceImpl implements UserService {
         public void updateUser(String sid, Integer id) throws InterruptedException {
             List<ActiveUser> listActive = activeUsers.get(sid);
 
+            if (listActive == null)
+                return;
+
             for (ActiveUser activeUser : listActive) {
-                if (activeUser.getId() == id) {
+                if (activeUser != null && activeUser.getId() == id) {
                     activeUser.setActive(true);
                     break;
                 }
