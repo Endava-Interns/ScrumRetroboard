@@ -13,12 +13,12 @@
       </database>
       <schema id="2" parent="1" name="dbo">
         <object-id>1</object-id>
-        <introspection-timestamp>2016-07-20.11:37:57.213</introspection-timestamp>
+        <introspection-timestamp>2016-07-21.07:58:18.587</introspection-timestamp>
       </schema>
       <table id="3" parent="2" name="Messages">
-        <object-id>1941581955</object-id>
-        <created-timestamp>2016-07-19.11:35:00.450</created-timestamp>
-        <modified-timestamp>2016-07-19.13:37:59.240</modified-timestamp>
+        <object-id>2053582354</object-id>
+        <created-timestamp>2016-07-20.12:41:17.280</created-timestamp>
+        <modified-timestamp>2016-07-20.13:02:08.890</modified-timestamp>
       </table>
       <table id="4" parent="2" name="Session">
         <object-id>1381579960</object-id>
@@ -33,7 +33,7 @@
       <table id="6" parent="2" name="Users">
         <object-id>1525580473</object-id>
         <created-timestamp>2016-07-12.08:28:49.720</created-timestamp>
-        <modified-timestamp>2016-07-19.13:37:59.180</modified-timestamp>
+        <modified-timestamp>2016-07-20.13:02:08.830</modified-timestamp>
       </table>
       <routine id="7" parent="2" name="fn_diagramobjects">
         <object-id>1157579162</object-id>
@@ -94,14 +94,13 @@
       <column id="15" parent="3" name="message_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(24)</sequence-identity>
+        <sequence-identity>1(79)</sequence-identity>
       </column>
       <column id="16" parent="3" name="text">
         <mandatory>1</mandatory>
         <data-type>nvarchar(max)</data-type>
       </column>
       <column id="17" parent="3" name="user_id">
-        <mandatory>1</mandatory>
         <data-type>int</data-type>
       </column>
       <column id="18" parent="3" name="category">
@@ -116,26 +115,26 @@
         <position>1</position>
       </index>
       <key id="20" parent="3" name="PK_messages">
-        <object-id>1957582012</object-id>
-        <created-timestamp>2016-07-19.11:35:00.913</created-timestamp>
-        <modified-timestamp>2016-07-19.11:35:00.913</modified-timestamp>
+        <object-id>2069582411</object-id>
+        <created-timestamp>2016-07-20.12:41:17.717</created-timestamp>
+        <modified-timestamp>2016-07-20.12:41:17.717</modified-timestamp>
         <columns>message_id</columns>
         <underlying-index>PK_messages</underlying-index>
         <primary>1</primary>
       </key>
       <foreign-key id="21" parent="3" name="FK_Messages_Users">
-        <object-id>2005582183</object-id>
-        <created-timestamp>2016-07-19.13:37:59.180</created-timestamp>
-        <modified-timestamp>2016-07-19.13:37:59.180</modified-timestamp>
+        <object-id>2133582639</object-id>
+        <created-timestamp>2016-07-20.13:02:08.830</created-timestamp>
+        <modified-timestamp>2016-07-20.13:02:08.830</modified-timestamp>
         <columns>user_id</columns>
         <ref-key>~.Users.PK_users</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
       <check id="22" parent="3" name="CK_messages_category">
-        <object-id>1973582069</object-id>
-        <created-timestamp>2016-07-19.11:35:00.977</created-timestamp>
-        <modified-timestamp>2016-07-19.11:35:00.977</modified-timestamp>
+        <object-id>2085582468</object-id>
+        <created-timestamp>2016-07-20.12:41:17.787</created-timestamp>
+        <modified-timestamp>2016-07-20.12:41:17.787</modified-timestamp>
         <columns>category</columns>
         <predicate>[category]=&apos;Continue&apos; OR [category]=&apos;Stop&apos; OR [category]=&apos;Start&apos;</predicate>
       </check>
@@ -217,7 +216,7 @@ name</columns>
       <column id="36" parent="6" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int</data-type>
-        <sequence-identity>1(300)</sequence-identity>
+        <sequence-identity>1(579)</sequence-identity>
       </column>
       <column id="37" parent="6" name="session_id">
         <mandatory>1</mandatory>

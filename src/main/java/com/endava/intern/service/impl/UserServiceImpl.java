@@ -86,15 +86,15 @@ public class UserServiceImpl implements UserService {
 
                                     System.out.println("MININSDFINSIDFNISDNFINSDFINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN");
 
-                                    if (data.activeUsers.get(currentUser.getSid()).size() == 0) {
+                                    /*if (data.activeUsers.get(currentUser.getSid()).size() == 0) {
                                         System.out.println("HLSDKJFLKSDJFKLJSDKLFJLSDJFKLSDJFLKJSDLKFJ");
                                         sessionIterator.remove();
                                         sessionService.deleteSesssion(currentUser.getSid());
                                         toBreak = true;
-                                    }
+                                    }*/
 
-                                    if (toBreak)
-                                        break;
+                                    /*if (toBreak)
+                                        break;*/
 
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
@@ -103,10 +103,10 @@ public class UserServiceImpl implements UserService {
                         }
                     }
 
-                    if (toBreak) {
+                    /*if (toBreak) {
                         toBreak = false;
                         break;
-                    }
+                    }*/
 
                 }
 
