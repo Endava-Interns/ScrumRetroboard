@@ -77,7 +77,9 @@ public class UserServiceImpl implements UserService {
                         currentUser = userIterator.next();
 
                         if (currentUser != null) {
-                            if (currentUser.isActive()) {
+                            if (currentUser.getId() == 760) {
+                                continue;
+                            } else if (currentUser.isActive()) {
                                 System.out.println("ACTIVE USER: " + currentUser.getId());
                                 currentUser.setActive(false);
                             } else {
