@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserService {
     private UserService threadUserService = this;
     private static Semaphore mutex;
     private static boolean toBreak;
+    private ActiveUser testingUser;
 
     private class ActiveUsers extends Thread {
 
@@ -51,6 +52,9 @@ public class UserServiceImpl implements UserService {
         public void run() {
 
             activeUsers = new HashMap<>();
+            List<ActiveUser> testing = new LinkedList<>();
+            testing.add(testingUser);
+            activeUsers.put("testing123", testing);
 
             while (true) {
 
@@ -77,7 +81,7 @@ public class UserServiceImpl implements UserService {
                         currentUser = userIterator.next();
 
                         if (currentUser != null) {
-                            if (currentUser.getId() == 760) {
+                            if (currentUser.getId() == 0) {
                                 continue;
                             } else if (currentUser.isActive()) {
                                 System.out.println("ACTIVE USER: " + currentUser.getId());
@@ -143,6 +147,7 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl() {
         toBreak = false;
+        testingUser = new ActiveUser(0, "testing123");
         mutex = new Semaphore(1);
         data = new ActiveUsers();
         data.start();
