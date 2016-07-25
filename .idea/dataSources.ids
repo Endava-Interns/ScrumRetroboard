@@ -13,7 +13,7 @@
       </database>
       <schema id="2" parent="1" name="dbo">
         <object-id>1</object-id>
-        <introspection-timestamp>2016-07-21.07:58:18.587</introspection-timestamp>
+        <introspection-timestamp>2016-07-22.08:14:29.863</introspection-timestamp>
       </schema>
       <table id="3" parent="2" name="Messages">
         <object-id>2053582354</object-id>

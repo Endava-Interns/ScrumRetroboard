@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
                 System.out.println('.');
 
                 try {
-                    sleep(4500);
+                    sleep(2250);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
