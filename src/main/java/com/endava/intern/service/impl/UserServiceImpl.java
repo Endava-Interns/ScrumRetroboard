@@ -58,10 +58,10 @@ public class UserServiceImpl implements UserService {
 
             while (true) {
 
-                System.out.println('.');
+                //System.out.println('.');
 
                 try {
-                    sleep(2250);
+                    sleep(1750);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -84,10 +84,10 @@ public class UserServiceImpl implements UserService {
                             if (currentUser.getId() == 0) {
                                 continue;
                             } else if (currentUser.isActive()) {
-                                System.out.println("ACTIVE USER: " + currentUser.getId());
+                                //System.out.println("ACTIVE USER: " + currentUser.getId());
                                 currentUser.setActive(false);
                             } else {
-                                System.out.println("DELETE USER: " + currentUser.getId());
+                                //System.out.println("DELETE USER: " + currentUser.getId());
                                 userIterator.remove();
                                 try {
                                     userService.deleteUserByID(currentUser.getId(), currentUser.getSid());
